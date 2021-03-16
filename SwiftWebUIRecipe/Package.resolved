@@ -1,0 +1,52 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "OpenCombine",
+        "repositoryURL": "https://github.com/broadwaylamb/OpenCombine.git",
+        "state": {
+          "branch": null,
+          "revision": "28993ae57de5a4ea7e164787636cafad442d568c",
+          "version": "0.12.0"
+        }
+      },
+      {
+        "package": "Runtime",
+        "repositoryURL": "https://github.com/wickwirew/Runtime.git",
+        "state": {
+          "branch": null,
+          "revision": "a848b81e1a0100801f572e5273ffe4352fd54088",
+          "version": "2.2.2"
+        }
+      },
+      {
+        "package": "SemanticUI",
+        "repositoryURL": "https://github.com/SwiftWebResources/SemanticUI-Swift.git",
+        "state": {
+          "branch": null,
+          "revision": "7397d062aeeb5ecce64389fecaca3b1e0fc9cacf",
+          "version": "2.4.2"
+        }
+      },
+      {
+        "package": "swift-nio",
+        "repositoryURL": "https://github.com/apple/swift-nio.git",
+        "state": {
+          "branch": null,
+          "revision": "3be4e0980075de10a4bc8dee07491d49175cfd7a",
+          "version": "2.27.0"
+        }
+      },
+      {
+        "package": "SwiftWebUI",
+        "repositoryURL": "https://github.com/SwiftWebUI/SwiftWebUI.git",
+        "state": {
+          "branch": null,
+          "revision": "18cbd100d360432cbc38142f8571176776953450",
+          "version": "0.3.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,109 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "swift build",
+            "type": "shell",
+            "command": "cd ${workspaceFolder} && swift build -c debug",            
+            "problemMatcher": {
+                "owner": "swift",
+                "fileLocation": "absolute",
+                "pattern": {
+                  "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                  "file": 1,
+                  "line": 2,
+                  "column": 3,
+                  "severity": 4,
+                  "message": 5
+                }
+            }
+        },
+        {
+            "label": "swift run",
+            "type": "shell",
+            "command": "cd ${workspaceFolder} && swift run -c debug",            
+            "problemMatcher": {
+                "owner": "swift",
+                "fileLocation": "absolute",
+                "pattern": {
+                  "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                  "file": 1,
+                  "line": 2,
+                  "column": 3,
+                  "severity": 4,
+                  "message": 5
+                }
+            }
+        },
+        {
+            "label": "swift 5.2.1 docker build",
+            "type": "shell",
+            "command": "docker run --rm -p 1337:1337 -v ${workspaceFolder}:${workspaceFolder} -v ${workspaceFolder}/.docker.build:${workspaceFolder}/.build swift:5.2.1 bash -c 'cd ${workspaceFolder} && swift build -c release'",
+            "problemMatcher": {
+                "owner": "swift",
+                "fileLocation": ["relative", "/"],
+                "pattern": {
+                  "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                  "file": 1,
+                  "line": 2,
+                  "column": 3,
+                  "severity": 4,
+                  "message": 5
+                }
+            }
+        },
+        {
+            "label": "swift 5.2.1 docker run",
+            "type": "shell",
+            "command": "docker run --rm -p 1337:1337 -v ${workspaceFolder}:${workspaceFolder} -v ${workspaceFolder}/.docker.build:${workspaceFolder}/.build swift:5.2.1 bash -c 'cd ${workspaceFolder} && swift run -c release'",
+            "problemMatcher": {
+                "owner": "swift",
+                "fileLocation": ["relative", "/"],
+                "pattern": {
+                  "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                  "file": 1,
+                  "line": 2,
+                  "column": 3,
+                  "severity": 4,
+                  "message": 5
+                }
+            }
+        },
+        {
+            "label": "swift 5.1.5 docker build",
+            "type": "shell",
+            "command": "docker run --rm -p 1337:1337 -v ${workspaceFolder}:${workspaceFolder} -v ${workspaceFolder}/.docker.build:${workspaceFolder}/.build swift:5.1.5 bash -c 'cd ${workspaceFolder} && swift build -c debug'",
+            "problemMatcher": {
+                "owner": "swift",
+                "fileLocation": ["relative", "/"],
+                "pattern": {
+                  "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                  "file": 1,
+                  "line": 2,
+                  "column": 3,
+                  "severity": 4,
+                  "message": 5
+                }
+            }
+        },
+        {
+            "label": "swift 5.1.5 docker run",
+            "type": "shell",
+            "command": "docker run --rm -p 1337:1337 -v ${workspaceFolder}:${workspaceFolder} -v ${workspaceFolder}/.docker.build:${workspaceFolder}/.build swift:5.1.5 bash -c 'cd ${workspaceFolder} && swift run -c debug'",
+            "problemMatcher": {
+                "owner": "swift",
+                "fileLocation": ["relative", "/"],
+                "pattern": {
+                  "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                  "file": 1,
+                  "line": 2,
+                  "column": 3,
+                  "severity": 4,
+                  "message": 5
+                }
+            }
+        }        
+    ]
+}
