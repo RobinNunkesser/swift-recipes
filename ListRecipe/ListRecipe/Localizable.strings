@@ -1,0 +1,4 @@
+MenuLabelSimpleList = "Nur Anzeige";
+MenuLabelSectionList = "Nur Anzeige (mit Sections)";
+MenuLabelAddDeleteList = "Hinzufügen und Löschen";
+MenuLabelSearch = "Suche";
