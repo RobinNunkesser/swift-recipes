@@ -4,7 +4,7 @@ import Alamofire
 class JSONPlaceholderAlamofireAPI : JSONPlaceholderAPI {
     let url = "https://jsonplaceholder.typicode.com"
     
-    func readAllPosts(completion: @escaping (Result<[Post], Error>) -> Void) {
+    func readAllPosts(completion: @escaping (Result<[PostEntity], Error>) -> Void) {
         AF.request("\(url)/posts")
             .validate()
             .responseJSON {
@@ -13,7 +13,7 @@ class JSONPlaceholderAlamofireAPI : JSONPlaceholderAPI {
     }
     
     func readPost(id: Int,
-                  completion: @escaping (Result<Post, Error>) -> Void) {
+                  completion: @escaping (Result<PostEntity, Error>) -> Void) {
         AF.request("\(url)/posts/\(id)")
             .validate()
             .responseJSON {
@@ -21,8 +21,8 @@ class JSONPlaceholderAlamofireAPI : JSONPlaceholderAPI {
         }
     }
     
-    func createPost(post: Post,
-                    completion: @escaping (Result<Post, Error>) -> Void) {
+    func createPost(post: PostEntity,
+                    completion: @escaping (Result<PostEntity, Error>) -> Void) {
         AF.request("\(url)/posts", method: .post, parameters: post,
                    encoder: JSONParameterEncoder.default)
                 .validate()

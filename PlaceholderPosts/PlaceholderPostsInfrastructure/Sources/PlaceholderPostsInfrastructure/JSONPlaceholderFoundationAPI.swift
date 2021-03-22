@@ -4,7 +4,7 @@ class JSONPlaceholderFoundationAPI : JSONPlaceholderAPI {
     let url = URL(string: "https://jsonplaceholder.typicode.com")!
     let session = URLSession(configuration: .default)
     
-    func readAllPosts(completion: @escaping (Result<[Post], Error>) -> Void) {
+    func readAllPosts(completion: @escaping (Result<[PostEntity], Error>) -> Void) {
         let task = session.dataTask(with: url.appendingPathComponent("posts")) {
             self.processResponse(data: $0, response: $1, error: $2,
                                 completion: completion)
@@ -13,7 +13,7 @@ class JSONPlaceholderFoundationAPI : JSONPlaceholderAPI {
     }
 
     func readPost(id: Int,
-                  completion: @escaping (Result<Post, Error>) -> Void) {
+                  completion: @escaping (Result<PostEntity, Error>) -> Void) {
         let task = session.dataTask(with: url.appendingPathComponent("posts")
             .appendingPathComponent("\(id)")) {
             self.processResponse(data: $0, response: $1, error: $2,
@@ -22,8 +22,8 @@ class JSONPlaceholderFoundationAPI : JSONPlaceholderAPI {
         task.resume()
     }
 
-    func createPost(post: Post,
-                  completion: @escaping (Result<Post, Error>) -> Void) {
+    func createPost(post: PostEntity,
+                  completion: @escaping (Result<PostEntity, Error>) -> Void) {
         var urlRequest = URLRequest(url: url.appendingPathComponent("posts"))
         urlRequest.httpMethod = "POST"
         urlRequest.addValue("application/json",

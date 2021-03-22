@@ -19,7 +19,7 @@ struct ContentView: View {
     }
     
     func start() {
-        service.execute(inDTO: GetAnswerCommandDTO(question: question)) {
+        service.execute(inDTO: question) {
             switch $0 {
             case let .success(value): self.success(value: value)
             case let .failure(error): self.failure(error: error)

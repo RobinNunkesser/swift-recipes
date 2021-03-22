@@ -1,14 +1,14 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let post = try? newJSONDecoder().decode(Post.self, from: jsonData)
+//   let post = try? newJSONDecoder().decode(PostEntity.self, from: jsonData)
 
 import Foundation
 
-// MARK: - Post
-public class Post: Codable {
-    public let userID, id: Int
-    public let title, body: String
+// MARK: - PostEntity
+public class PostEntity: Codable {
+    public var userID, id: Int
+    public var title, body: String
 
     enum CodingKeys: String, CodingKey {
         case userID = "userId"

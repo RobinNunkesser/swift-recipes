@@ -40,7 +40,7 @@ final class PlaceholderPostsInfrastructureTests: XCTestCase {
     
     func testCreatePost() {
         let expectation = self.expectation(description: "Async complete")
-        let post = Post(userID: 1, id: 2, title: "foo", body: "bar")
+        let post = PostEntity(userID: 1, id: 2, title: "foo", body: "bar")
         api.createPost(post: post, completion:
             {
                 switch $0 {

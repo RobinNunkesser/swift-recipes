@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6F8D786124FE4563005F48B1 /* PlaceholderPostsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6F8D786024FE4563005F48B1 /* PlaceholderPostsCore */; };
+		6FC192752608D1E800048DD5 /* GetPostCommandDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC192742608D1E800048DD5 /* GetPostCommandDTO.swift */; };
 		6FDDD8D224FCDA820009A0C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDDD8D124FCDA820009A0C4 /* AppDelegate.swift */; };
 		6FDDD8D424FCDA820009A0C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDDD8D324FCDA820009A0C4 /* SceneDelegate.swift */; };
 		6FDDD8D624FCDA820009A0C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDDD8D524FCDA820009A0C4 /* ContentView.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6FC192742608D1E800048DD5 /* GetPostCommandDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostCommandDTO.swift; sourceTree = "<group>"; };
 		6FDDD8CE24FCDA820009A0C4 /* PlaceholderPosts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceholderPosts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FDDD8D124FCDA820009A0C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FDDD8D324FCDA820009A0C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				6FDDD8D124FCDA820009A0C4 /* AppDelegate.swift */,
 				6FDDD8D324FCDA820009A0C4 /* SceneDelegate.swift */,
 				6FDDD8D524FCDA820009A0C4 /* ContentView.swift */,
+				6FC192742608D1E800048DD5 /* GetPostCommandDTO.swift */,
 				6FDDD8D724FCDA830009A0C4 /* Assets.xcassets */,
 				6FDDD8DC24FCDA830009A0C4 /* LaunchScreen.storyboard */,
 				6FDDD8DF24FCDA830009A0C4 /* Info.plist */,
@@ -285,6 +288,7 @@
 			files = (
 				6FDDD8D224FCDA820009A0C4 /* AppDelegate.swift in Sources */,
 				6FDDD8D424FCDA820009A0C4 /* SceneDelegate.swift in Sources */,
+				6FC192752608D1E800048DD5 /* GetPostCommandDTO.swift in Sources */,
 				6FDDD8D624FCDA820009A0C4 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,7 +27,7 @@ struct ContentView: View {
     }
     
     func start() {
-        let service = GetPostCommand(repository:
+        let service = ConcreteGetPostCommand(repository:
             PostRepositoryAdapter(useFoundation: foundation))
         service.execute(inDTO: GetPostCommandDTO(id: Int(id)!)) {
             switch $0 {
@@ -37,7 +37,7 @@ struct ContentView: View {
         }
     }
     
-    func success(value: PostEntity) {
+    func success(value: PlaceholderPostsCore.Post) {
         result = value.description
     }
     

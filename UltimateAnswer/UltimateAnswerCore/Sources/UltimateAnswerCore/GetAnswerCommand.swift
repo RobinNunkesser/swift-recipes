@@ -2,7 +2,7 @@ import Foundation
 import UltimateAnswerCommon
 
 public class GetAnswerCommand : CommandHandler {
-    public typealias inDTOType = GetAnswerCommandDTO
+    public typealias inDTOType = String
     public typealias outDTOType = String
     
     var superComputer : SuperComputer
@@ -11,9 +11,9 @@ public class GetAnswerCommand : CommandHandler {
         self.superComputer = superComputer
     }
     
-    public func execute(inDTO: GetAnswerCommandDTO,
+    public func execute(inDTO: String,
                         completion: @escaping (Result<String, Error>) -> Void) {
-        superComputer.answer(question: inDTO.question, completion: completion)
+        superComputer.answer(question: inDTO, completion: completion)
     }
 
 }
