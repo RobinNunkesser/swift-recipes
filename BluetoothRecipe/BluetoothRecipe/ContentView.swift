@@ -11,8 +11,9 @@ struct ContentView: View {
     @EnvironmentObject var viewModel : ContentViewModel
             
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        List(viewModel.peripherals, id: \.name) {
+                Text($0.name)            
+        }
     }
 }
 

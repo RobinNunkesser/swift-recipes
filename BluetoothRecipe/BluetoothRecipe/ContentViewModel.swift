@@ -8,6 +8,9 @@
 import Foundation
 
 class ContentViewModel : ObservableObject, PeripheralScannerDelegate {
+    
+    @Published var peripherals : [Peripheral] = []
+    
     var peripheralScanner : PeripheralScanner
 
     init() {        
@@ -20,7 +23,7 @@ class ContentViewModel : ObservableObject, PeripheralScannerDelegate {
     }
     
     func newPeripherals(_ peripherals: [Peripheral], willBeAddedTo existing: [Peripheral]) {
-        
+        self.peripherals.append(contentsOf: peripherals)        
     }
     
     func peripherals(_ peripherals: [Peripheral], addedTo old: [Peripheral]) {
