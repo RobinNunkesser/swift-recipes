@@ -7,12 +7,6 @@ struct SecondView: View {
                 .font(.title)
                 .navigationBarTitle(Text("SecondViewTitle"))
         }
-        .tabItem {
-            VStack {
-                Image("second")
-                Text("Second")
-            }
-        }
     }
 }
 

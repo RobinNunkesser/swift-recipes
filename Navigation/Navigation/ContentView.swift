@@ -5,8 +5,14 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selection){
-            FirstView().tag(0)
-            SecondView().tag(1)
+            FirstView().tag(0).tabItem {
+                Image(systemName: "1.square.fill")
+                Text("First")
+            }
+            SecondView().tag(1).tabItem {
+                Image(systemName: "2.square.fill")
+                Text("Second")
+            }
         }
     }
 }

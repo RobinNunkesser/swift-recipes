@@ -7,13 +7,7 @@ struct FirstView: View {
                 Text("NavigateButton")
             }
             .navigationBarTitle(Text("FirstViewTitle"))
-        }
-        .tabItem {
-            VStack {
-                Image("first")
-                Text("First")
-            }
-        }
+        }        
     }
 }
 
