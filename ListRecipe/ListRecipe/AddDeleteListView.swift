@@ -14,6 +14,7 @@ struct AddDeleteListView: View {
                 EditButton()
                 Button(action: viewModel.addItem) {
                     Label("Add Item", systemImage: "plus")
+                        .labelStyle(IconOnlyLabelStyle())
                 }
             }
         )
