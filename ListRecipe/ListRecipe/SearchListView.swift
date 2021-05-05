@@ -14,7 +14,7 @@ struct SearchListView: View {
     }
     
     var body: some View {
-        Group {
+        Group {                        
             SearchBar(text: $searchText)
             List(filteredItems, id: \.text) { item in
                 SubtitleRow(text: item.text, detailText: item.detailText)

@@ -12,7 +12,9 @@ struct AddDeleteListView: View {
         }
         .navigationBarItems(trailing: HStack {
                 EditButton()
-                Button(action: viewModel.addItem, label: { Text("Add") })
+                Button(action: viewModel.addItem) {
+                    Label("Add Item", systemImage: "plus")
+                }
             }
         )
         .navigationBarTitle("Add / Delete List View")
