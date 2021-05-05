@@ -407,6 +407,7 @@
 				DEVELOPMENT_TEAM = YKW4K6F98F;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ListRecipe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -427,6 +428,7 @@
 				DEVELOPMENT_TEAM = YKW4K6F98F;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ListRecipe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
