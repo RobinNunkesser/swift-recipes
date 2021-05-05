@@ -1,13 +1,13 @@
 //
-//  Core_Data_RecipeUITests.swift
-//  Core Data RecipeUITests
+//  CoreDataRecipeUITests.swift
+//  CoreDataRecipeUITests
 //
 //  Created by Prof. Dr. Nunkesser, Robin on 05.05.21.
 //
 
 import XCTest
 
-class Core_Data_RecipeUITests: XCTestCase {
+class CoreDataRecipeUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

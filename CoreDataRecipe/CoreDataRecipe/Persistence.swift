@@ -1,6 +1,6 @@
 //
 //  Persistence.swift
-//  Core Data Recipe
+//  CoreDataRecipe
 //
 //  Created by Prof. Dr. Nunkesser, Robin on 05.05.21.
 //
@@ -31,7 +31,7 @@ struct PersistenceController {
     let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "Core_Data_Recipe")
+        container = NSPersistentContainer(name: "CoreDataRecipe")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }

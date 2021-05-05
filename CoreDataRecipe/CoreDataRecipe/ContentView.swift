@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Core Data Recipe
+//  CoreDataRecipe
 //
 //  Created by Prof. Dr. Nunkesser, Robin on 05.05.21.
 //
