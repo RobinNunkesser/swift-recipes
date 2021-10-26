@@ -6,19 +6,25 @@
 //
 
 import Foundation
+import PoetryReaderDomain
 
-class PoemFileAdapter {
-    func fetch() {
-        
+class PoemFileAdapter : ObtainPoems {
+    func GetAPoem(completion: @escaping (Result<String,Error>) -> Void) {
         if let path = Bundle.module.path(forResource: "Poetry", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let decoder = JSONDecoder()
                 let model = try decoder.decode(Poems.self, from: data)
-                print(model)
+                completion(.success(model.poems.first!.poem))
             } catch {
-                print("ERR")
+                completion(.failure(error))
             }
         }
     }
+    
+    @available(iOS 15.0.0, *)
+    func GetAPoem() async -> Result<String,Error> {
+        return .success("")
+    }
+    
 }

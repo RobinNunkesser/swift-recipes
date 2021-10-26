@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:PoetryReaderDomain">
+   </FileRef>
+   <FileRef
       location = "group:PoetryReaderInfra">
    </FileRef>
    <FileRef
