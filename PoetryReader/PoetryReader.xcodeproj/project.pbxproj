@@ -14,9 +14,6 @@
 		6FE2E49B2727F10E00192A3D /* PoetryReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2E49A2727F10E00192A3D /* PoetryReaderTests.swift */; };
 		6FE2E4A52727F10E00192A3D /* PoetryReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2E4A42727F10E00192A3D /* PoetryReaderUITests.swift */; };
 		6FE2E4A72727F10E00192A3D /* PoetryReaderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2E4A62727F10E00192A3D /* PoetryReaderUITestsLaunchTests.swift */; };
-		6FE2E4B42727F2C300192A3D /* Poetry.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FE2E4B32727F2C300192A3D /* Poetry.json */; };
-		6FE2E4B62727F3FC00192A3D /* PoemFileAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2E4B52727F3FC00192A3D /* PoemFileAdapter.swift */; };
-		6FE2E4B82727F4A500192A3D /* Poems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2E4B72727F4A500192A3D /* Poems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +44,6 @@
 		6FE2E4A02727F10E00192A3D /* PoetryReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoetryReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE2E4A42727F10E00192A3D /* PoetryReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetryReaderUITests.swift; sourceTree = "<group>"; };
 		6FE2E4A62727F10E00192A3D /* PoetryReaderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetryReaderUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		6FE2E4B32727F2C300192A3D /* Poetry.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Poetry.json; sourceTree = "<group>"; };
-		6FE2E4B52727F3FC00192A3D /* PoemFileAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemFileAdapter.swift; sourceTree = "<group>"; };
-		6FE2E4B72727F4A500192A3D /* Poems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +98,6 @@
 				6FE2E48B2727F10B00192A3D /* ContentView.swift */,
 				6FE2E48D2727F10E00192A3D /* Assets.xcassets */,
 				6FE2E48F2727F10E00192A3D /* Preview Content */,
-				6FE2E4B32727F2C300192A3D /* Poetry.json */,
-				6FE2E4B52727F3FC00192A3D /* PoemFileAdapter.swift */,
-				6FE2E4B72727F4A500192A3D /* Poems.swift */,
 			);
 			path = PoetryReader;
 			sourceTree = "<group>";
@@ -242,7 +233,6 @@
 			files = (
 				6FE2E4912727F10E00192A3D /* Preview Assets.xcassets in Resources */,
 				6FE2E48E2727F10E00192A3D /* Assets.xcassets in Resources */,
-				6FE2E4B42727F2C300192A3D /* Poetry.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,8 +259,6 @@
 			files = (
 				6FE2E48C2727F10B00192A3D /* ContentView.swift in Sources */,
 				6FE2E48A2727F10B00192A3D /* PoetryReaderApp.swift in Sources */,
-				6FE2E4B82727F4A500192A3D /* Poems.swift in Sources */,
-				6FE2E4B62727F3FC00192A3D /* PoemFileAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

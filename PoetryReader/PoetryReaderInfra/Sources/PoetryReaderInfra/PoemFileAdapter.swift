@@ -10,7 +10,7 @@ import Foundation
 class PoemFileAdapter {
     func fetch() {
         
-        if let path = Bundle.main.path(forResource: "Poetry", ofType: "json") {
+        if let path = Bundle.module.path(forResource: "Poetry", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let decoder = JSONDecoder()
