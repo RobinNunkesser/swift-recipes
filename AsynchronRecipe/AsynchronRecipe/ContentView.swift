@@ -13,20 +13,18 @@ struct ContentView: View {
     }
     
     func start() {
-        asyncCall(completion: {
-            switch $0 {
+        Task(priority: .medium) {
+            switch await asyncCall() {
             case let .success(value): self.result = value
             case let .failure(error): debugPrint(error)
             }
-        })
+        }
         result = "Started"
     }
     
-    func asyncCall(completion: @escaping (Result<String,Error>) -> Void) {
-        DispatchQueue.global(qos: .userInitiated).async {
-            sleep(1)
-            completion(.success("My return value"))
-        }
+    func asyncCall() async -> Result<String,Error> {
+        sleep(1)
+        return .success("My return value")
     }
 }
 
