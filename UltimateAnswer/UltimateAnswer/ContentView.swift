@@ -19,8 +19,8 @@ struct ContentView: View {
     }
     
     func start() {
-        service.execute(inDTO: question) {
-            switch $0 {
+        Task(priority: .medium) {
+            switch await service.execute(inDTO: question) {
             case let .success(value): self.success(value: value)
             case let .failure(error): self.failure(error: error)
             }

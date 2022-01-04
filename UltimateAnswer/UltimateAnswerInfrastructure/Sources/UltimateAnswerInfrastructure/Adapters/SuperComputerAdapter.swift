@@ -9,11 +9,8 @@ public class SuperComputerAdapter : SuperComputer {
         
     }
     
-    public func answer(question: String,
-                       completion: @escaping (Result<String, Error>) -> Void) {
-        deepThought.provideAnswer(completion: {
-            completion($0.map{$0.description})
-        })
+    public func answer(question: String) async -> Result<String, Error> {
+        return await deepThought.provideAnswer().map{$0.description}        
     }
     
 }

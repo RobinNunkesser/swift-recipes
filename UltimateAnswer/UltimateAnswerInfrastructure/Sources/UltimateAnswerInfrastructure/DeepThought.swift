@@ -2,10 +2,8 @@ import Foundation
 
 class DeepThought {
     
-    func provideAnswer(completion: @escaping (Result<Int, Error>) -> Void) {
-        DispatchQueue.global(qos: .userInitiated).async {
-            sleep(1)
-            completion(.success(42))
-        }
-    }
+    func provideAnswer() async -> Result<Int, Error> {
+        sleep(1)
+        return .success(42)        
+    }    
 }
