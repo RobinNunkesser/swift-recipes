@@ -1,5 +1,5 @@
 import Foundation
 
 public protocol SuperComputer {
-    func answer(question: String) async -> Result<String, Error>
+    func answer(question: String) async throws -> String
 }

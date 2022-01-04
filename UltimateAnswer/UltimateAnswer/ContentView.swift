@@ -20,9 +20,10 @@ struct ContentView: View {
     
     func start() {
         Task(priority: .medium) {
-            switch await service.execute(inDTO: question) {
-            case let .success(value): self.success(value: value)
-            case let .failure(error): self.failure(error: error)
+            do{
+                try success(value: await service.execute(inDTO: question))
+            } catch let error {
+                failure(error: error)
             }
         }
     }

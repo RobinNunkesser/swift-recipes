@@ -2,8 +2,8 @@ import Foundation
 
 class DeepThought {
     
-    func provideAnswer() async -> Result<Int, Error> {
+    func provideAnswer() async throws -> Int {
         sleep(1)
-        return .success(42)        
+        return 42        
     }    
 }

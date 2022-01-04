@@ -11,8 +11,8 @@ public class GetAnswerCommand : CommandHandler {
         self.superComputer = superComputer
     }
 
-    public func execute(inDTO: String) async -> Result<String, Error> {
-        return await superComputer.answer(question: inDTO)
+    public func execute(inDTO: String) async throws -> String {
+        return try await superComputer.answer(question: inDTO)
     }
 
 }

@@ -9,8 +9,8 @@ public class SuperComputerAdapter : SuperComputer {
         
     }
     
-    public func answer(question: String) async -> Result<String, Error> {
-        return await deepThought.provideAnswer().map{$0.description}        
+    public func answer(question: String) async throws -> String {
+        return try await deepThought.provideAnswer().description
     }
     
 }
