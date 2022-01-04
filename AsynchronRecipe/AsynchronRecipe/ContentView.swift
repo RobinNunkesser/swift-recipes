@@ -14,17 +14,14 @@ struct ContentView: View {
     
     func start() {
         Task(priority: .medium) {
-            switch await asyncCall() {
-            case let .success(value): self.result = value
-            case let .failure(error): debugPrint(error)
-            }
+            self.result = await asyncCall() 
         }
         result = "Started"
     }
     
-    func asyncCall() async -> Result<String,Error> {
+    func asyncCall() async -> String {
         sleep(1)
-        return .success("My return value")
+        return "My return value"
     }
 }
 
