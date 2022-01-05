@@ -20,7 +20,7 @@ struct ContentView: View {
     
     func start() {
         Task(priority: .medium) {
-            do{
+            do {
                 try success(value: await service.execute(inDTO: question))
             } catch let error {
                 failure(error: error)

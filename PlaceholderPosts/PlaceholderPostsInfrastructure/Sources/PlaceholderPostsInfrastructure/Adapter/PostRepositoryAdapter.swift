@@ -1,56 +1,43 @@
 import Foundation
-import ExplicitArchitecture
+import CommonPorts
 import PlaceholderPostsCore
 
-public class PostRepositoryAdapter : Repository {
+public class PostRepositoryAdapter : CrudRepository {
     public typealias idType = Int
     public typealias entityType = Post
     
-    var adaptee : JSONPlaceholderAPI
-    
-    public init(useFoundation: Bool) {
-        if (useFoundation) {
-            adaptee = JSONPlaceholderFoundationAPI()
-        } else {
-            adaptee = JSONPlaceholderAlamofireAPI()
-        }
+    var adaptee = JSONPlaceholderFoundationAPI()
+
+    public init() {
+    }
+        
+    public func create(entity: Post) async throws -> Int {
+        let post = PostEntity(userID: entity.userID, id: entity.id,
+                              title: entity.title, body: entity.body)
+        let response = try await adaptee.createPost(post: post)
+        return response.id
+    }
+            
+    public func retrieve(id: Int) async throws -> Post {
+        let post = try await adaptee.readPost(id: id)
+        return post as Post
     }
     
-    public func create(entity: Post,
-                completion: @escaping (Result<Int, Error>) -> Void) {
-        adaptee.createPost(post: PostEntity(userID: entity.userID,
-                                            id: entity.id, title: entity.title,
-                                            body: entity.body)) {
-            completion($0.map{$0.id})
-        }
+    public func retrieveAll() async throws -> [Post] {
+        let posts = try await adaptee.readAllPosts()
+        return posts.map({$0 as Post})
     }
     
-    public func retrieve(id: Int,
-                  completion: @escaping (Result<Post, Error>) -> Void) {
-        adaptee.readPost(id: id) {
-            completion($0.map({post in post as Post}))
-        }
-    }
-    
-    public func retrieveAll(
-        completion: @escaping (Result<[Post], Error>) -> Void) {
-        adaptee.readAllPosts() {
-            completion($0.map({posts in posts.map({post in post as Post})}))
-        }        
-    }
-    
-    public func update(id: Int, entity: Post,
-                completion: @escaping (Result<Bool, Error>) -> Void) {
+    public func update(id: Int, entity: Post) async throws -> Bool {
         debugPrint("Not implemented")
         abort()
     }
     
-    public func delete(id: Int,
-                       completion: @escaping (Result<Bool, Error>) -> Void) {
+    public func delete(id: Int) async throws -> Bool {
         debugPrint("Not implemented")
         abort()
     }
-    
+                
 }
 
 extension PostEntity : Post {

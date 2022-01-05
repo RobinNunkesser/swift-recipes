@@ -2,21 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "Alamofire",
-        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "package": "CommonPorts",
+        "repositoryURL": "https://github.com/Italbytz/spm-ports-common.git",
         "state": {
           "branch": null,
-          "revision": "becd9a729a37bdbef5bc39dc3c702b99f9e3d046",
-          "version": "5.2.2"
-        }
-      },
-      {
-        "package": "ExplicitArchitecture",
-        "repositoryURL": "https://github.com/RobinNunkesser/explicitarchitecture-spm.git",
-        "state": {
-          "branch": null,
-          "revision": "22f239b1f42c9bb797341584aca94cc31484619a",
-          "version": "0.0.1"
+          "revision": "1c4bfa422ce83b9bcba9de2ceb1ad7ecaf85ca22",
+          "version": "0.0.5"
         }
       }
     ]

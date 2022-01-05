@@ -1,57 +1,49 @@
 import Foundation
 
-class JSONPlaceholderFoundationAPI : JSONPlaceholderAPI {
+enum FetchError: Error {
+    case statusCodeMissing
+    case statusCodeNotOk
+}
+
+class JSONPlaceholderFoundationAPI {
     let url = URL(string: "https://jsonplaceholder.typicode.com")!
     let session = URLSession(configuration: .default)
+        
+    func readAllPosts() async throws -> [PostEntity] {
+        let request = URLRequest(url: url.appendingPathComponent("posts"))
+        let (data, response) = try await session.data(for: request)
+        return try self.processResponse(data: data, response: response)
+    }
     
-    func readAllPosts(completion: @escaping (Result<[PostEntity], Error>) -> Void) {
-        let task = session.dataTask(with: url.appendingPathComponent("posts")) {
-            self.processResponse(data: $0, response: $1, error: $2,
-                                completion: completion)
-        }
-        task.resume()
+    func readPost(id: Int) async throws -> PostEntity {
+        let request = URLRequest(url: url.appendingPathComponent("posts")
+                                    .appendingPathComponent("\(id)"))
+        let (data, response) = try await session.data(for: request)
+        return try self.processResponse(data: data, response: response)
     }
-
-    func readPost(id: Int,
-                  completion: @escaping (Result<PostEntity, Error>) -> Void) {
-        let task = session.dataTask(with: url.appendingPathComponent("posts")
-            .appendingPathComponent("\(id)")) {
-            self.processResponse(data: $0, response: $1, error: $2,
-                                completion: completion)
-        }
-        task.resume()
-    }
-
-    func createPost(post: PostEntity,
-                  completion: @escaping (Result<PostEntity, Error>) -> Void) {
-        var urlRequest = URLRequest(url: url.appendingPathComponent("posts"))
-        urlRequest.httpMethod = "POST"
-        urlRequest.addValue("application/json",
+    
+    func createPost(post: PostEntity) async throws -> PostEntity {
+        var request = URLRequest(url: url.appendingPathComponent("posts"))
+        request.httpMethod = "POST"
+        request.addValue("application/json",
                             forHTTPHeaderField: "Content-Type")
         let payload = try! JSONEncoder().encode(post)
-        let task = session.uploadTask(with: urlRequest, from: payload) {
-            self.processResponse(data: $0, response: $1, error: $2,
-                                completion: completion)
-        }
-        task.resume()
+        let (data, response) =
+        try await session.upload(for: request, from: payload)
+        return try self.processResponse(data: data, response: response)
     }
     
-    func processResponse<Success : Decodable>(data: Data?,
-                                             response: URLResponse?,
-                                             error: Error?,
-                    completion: @escaping (Result<Success, Error>) -> Void) {
-        
-        guard let data = data else {
-            completion(Result.failure(error!))
-            return
+    func processResponse<Value : Decodable>(data: Data, response: URLResponse)
+    throws -> Value {
+        guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
+            throw FetchError.statusCodeMissing
         }
-        do {
-            let decoder = JSONDecoder()
-            let post = try decoder.decode(Success.self, from: data)
-            completion(.success(post))
-        } catch  {
-            completion(.failure(error))
+        guard statusCode >= 200 && statusCode < 300 else {
+            throw FetchError.statusCodeNotOk
+            
         }
+        let decoder = JSONDecoder()
+        return try decoder.decode(Value.self, from: data)
     }
 
 }

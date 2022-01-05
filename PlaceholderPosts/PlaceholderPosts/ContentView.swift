@@ -5,7 +5,6 @@ import PlaceholderPostsCore
 struct ContentView: View {
     @State var id = ""
     @State var result = ""
-    @State var foundation = true
     @State private var showError = false
     @State private var errorText = ""
     
@@ -16,9 +15,6 @@ struct ContentView: View {
             Button(action: start) {
                 Text("Start")
             }
-            Toggle(isOn: $foundation) {
-                Text("Use Foundation?")
-            }
             Text(result)
         }.alert(isPresented: $showError) { () -> Alert in
             Alert(title: Text("Error"), message: Text(errorText),
@@ -27,12 +23,13 @@ struct ContentView: View {
     }
     
     func start() {
-        let service = ConcreteGetPostCommand(repository:
-            PostRepositoryAdapter(useFoundation: foundation))
-        service.execute(inDTO: GetPostCommandDTO(id: Int(id)!)) {
-            switch $0 {
-            case let .success(value): self.success(value: value)
-            case let .failure(error): self.failure(error: error)
+        let service = ConcreteGetPostCommand(repository: PostRepositoryAdapter())
+        Task(priority: .medium) {
+            do {
+                try success(value:
+                    await service.execute(inDTO: GetPostCommandDTO(id: Int(id)!)))
+            } catch let error {
+                failure(error: error)
             }
         }
     }

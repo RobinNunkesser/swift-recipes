@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Prof. Dr. Nunkesser, Robin on 31.08.20.
-//
-
 import Foundation
 
 class HttpRequestModel : Codable {
