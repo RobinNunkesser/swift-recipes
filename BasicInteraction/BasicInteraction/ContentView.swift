@@ -7,7 +7,7 @@ struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading) {
             TextField("Enter text", text: $text)
-            Button(action: { self.process() }) {
+            Button(action: process) {
                 Text("Process")
             }
             Text(outputText)

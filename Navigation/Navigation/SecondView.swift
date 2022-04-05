@@ -5,7 +5,7 @@ struct SecondView: View {
         NavigationView {
             Text("SecondViewLabel")
                 .font(.title)
-                .navigationBarTitle(Text("SecondViewTitle"))
+                .navigationTitle(Text("SecondViewTitle"))
         }
     }
 }
