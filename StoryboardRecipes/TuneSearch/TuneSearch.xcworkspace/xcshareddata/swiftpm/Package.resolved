@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "8dd85aee02e39dd280c75eef88ffdb86eed4b07b",
+          "version": "5.6.2"
+        }
+      },
+      {
+        "package": "AlamofireImage",
+        "repositoryURL": "https://github.com/Alamofire/AlamofireImage",
+        "state": {
+          "branch": null,
+          "revision": "98cbb00ce0ec5fc8e52a5b50a6bfc08d3e5aee10",
+          "version": "4.2.0"
+        }
+      },
+      {
+        "package": "ExplicitArchitecture",
+        "repositoryURL": "https://github.com/RobinNunkesser/explicitarchitecture-spm.git",
+        "state": {
+          "branch": null,
+          "revision": "22f239b1f42c9bb797341584aca94cc31484619a",
+          "version": "0.0.1"
+        }
+      },
+      {
+        "package": "TunesearchCorePorts",
+        "repositoryURL": "https://github.com/RobinNunkesser/explicitarchitecture-tunesearch-core-ports-spm",
+        "state": {
+          "branch": null,
+          "revision": "232e611c99bcd8a82561bcf2a60dd6024ae41e34",
+          "version": "0.0.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

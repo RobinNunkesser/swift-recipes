@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "EXz-Ph-WSq"; */
+"EXz-Ph-WSq.text" = "Title";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "XmA-DW-14V"; */
+"XmA-DW-14V.text" = "Subtitle";
+
+/* Class = "UINavigationItem"; title = "Search"; ObjectID = "Zam-rL-6qw"; */
+"Zam-rL-6qw.title" = "Suche";
+
+/* Class = "UITextField"; placeholder = "Search term"; ObjectID = "hyh-pO-d65"; */
+"hyh-pO-d65.placeholder" = "Suchbegriff";
+
+/* Class = "UIButton"; normalTitle = "Search"; ObjectID = "qiU-NR-ywN"; */
+"qiU-NR-ywN.normalTitle" = "Suchen";
