@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6FC4AE1D28D0950200E56281 /* JSONPlaceholderInfrastructure in Frameworks */ = {isa = PBXBuildFile; productRef = 6FC4AE1C28D0950200E56281 /* JSONPlaceholderInfrastructure */; };
 		6FD6A91F28D07BF1000121A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD6A91E28D07BF1000121A4 /* AppDelegate.swift */; };
 		6FD6A92128D07BF1000121A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD6A92028D07BF1000121A4 /* SceneDelegate.swift */; };
 		6FD6A92328D07BF1000121A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD6A92228D07BF1000121A4 /* ViewController.swift */; };
@@ -16,9 +17,6 @@
 		6FD6A93628D07BF5000121A4 /* JSONPlaceholderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD6A93528D07BF5000121A4 /* JSONPlaceholderTests.swift */; };
 		6FD6A94028D07BF5000121A4 /* JSONPlaceholderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD6A93F28D07BF5000121A4 /* JSONPlaceholderUITests.swift */; };
 		6FD6A94228D07BF5000121A4 /* JSONPlaceholderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD6A94128D07BF5000121A4 /* JSONPlaceholderUITestsLaunchTests.swift */; };
-		6FD6A95728D08979000121A4 /* JSONPlaceholderDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD6A95528D08979000121A4 /* JSONPlaceholderDataSource.swift */; };
-		6FD6A95828D08979000121A4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD6A95628D08979000121A4 /* Post.swift */; };
-		6FD6A95A28D08998000121A4 /* JSONPlaceholderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD6A95928D08998000121A4 /* JSONPlaceholderAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6FC4AE1928D0946500E56281 /* JSONPlaceholderInfrastructure */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = JSONPlaceholderInfrastructure; sourceTree = "<group>"; };
+		6FC4AE1F28D0952800E56281 /* JSONPlaceholderInfrastructure */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = JSONPlaceholderInfrastructure; sourceTree = "<group>"; };
 		6FD6A91B28D07BF1000121A4 /* JSONPlaceholder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONPlaceholder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FD6A91E28D07BF1000121A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FD6A92028D07BF1000121A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,10 +52,6 @@
 		6FD6A93B28D07BF5000121A4 /* JSONPlaceholderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSONPlaceholderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FD6A93F28D07BF5000121A4 /* JSONPlaceholderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderUITests.swift; sourceTree = "<group>"; };
 		6FD6A94128D07BF5000121A4 /* JSONPlaceholderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		6FD6A95228D0884D000121A4 /* JSONPlaceholderInfrastructure */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = JSONPlaceholderInfrastructure; sourceTree = "<group>"; };
-		6FD6A95528D08979000121A4 /* JSONPlaceholderDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderDataSource.swift; sourceTree = "<group>"; };
-		6FD6A95628D08979000121A4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		6FD6A95928D08998000121A4 /* JSONPlaceholderAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FC4AE1D28D0950200E56281 /* JSONPlaceholderInfrastructure in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,10 +80,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6FC4AE1E28D0952800E56281 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				6FC4AE1F28D0952800E56281 /* JSONPlaceholderInfrastructure */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		6FD6A91228D07BF1000121A4 = {
 			isa = PBXGroup;
 			children = (
-				6FD6A95128D0884D000121A4 /* Packages */,
+				6FC4AE1E28D0952800E56281 /* Packages */,
+				6FC4AE1928D0946500E56281 /* JSONPlaceholderInfrastructure */,
 				6FD6A91D28D07BF1000121A4 /* JSONPlaceholder */,
 				6FD6A93428D07BF5000121A4 /* JSONPlaceholderTests */,
 				6FD6A93E28D07BF5000121A4 /* JSONPlaceholderUITests */,
@@ -108,9 +114,6 @@
 		6FD6A91D28D07BF1000121A4 /* JSONPlaceholder */ = {
 			isa = PBXGroup;
 			children = (
-				6FD6A95928D08998000121A4 /* JSONPlaceholderAPI.swift */,
-				6FD6A95528D08979000121A4 /* JSONPlaceholderDataSource.swift */,
-				6FD6A95628D08979000121A4 /* Post.swift */,
 				6FD6A91E28D07BF1000121A4 /* AppDelegate.swift */,
 				6FD6A92028D07BF1000121A4 /* SceneDelegate.swift */,
 				6FD6A92228D07BF1000121A4 /* ViewController.swift */,
@@ -146,14 +149,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6FD6A95128D0884D000121A4 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				6FD6A95228D0884D000121A4 /* JSONPlaceholderInfrastructure */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,6 +166,7 @@
 			);
 			name = JSONPlaceholder;
 			packageProductDependencies = (
+				6FC4AE1C28D0950200E56281 /* JSONPlaceholderInfrastructure */,
 			);
 			productName = JSONPlaceholder;
 			productReference = 6FD6A91B28D07BF1000121A4 /* JSONPlaceholder.app */;
@@ -287,12 +283,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FD6A95A28D08998000121A4 /* JSONPlaceholderAPI.swift in Sources */,
 				6FD6A92328D07BF1000121A4 /* ViewController.swift in Sources */,
 				6FD6A91F28D07BF1000121A4 /* AppDelegate.swift in Sources */,
-				6FD6A95728D08979000121A4 /* JSONPlaceholderDataSource.swift in Sources */,
 				6FD6A92128D07BF1000121A4 /* SceneDelegate.swift in Sources */,
-				6FD6A95828D08979000121A4 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +627,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6FC4AE1C28D0950200E56281 /* JSONPlaceholderInfrastructure */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JSONPlaceholderInfrastructure;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6FD6A91328D07BF1000121A4 /* Project object */;
 }

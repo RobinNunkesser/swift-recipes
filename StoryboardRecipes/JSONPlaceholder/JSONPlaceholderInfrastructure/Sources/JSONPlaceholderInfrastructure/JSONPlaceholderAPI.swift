@@ -11,12 +11,16 @@ enum FetchError : Error {
     case ParsingError
 }
 
-class JSONPlaceholderAPI {//} : JSONPlaceholderDataSource {
+public class JSONPlaceholderAPI {//} : JSONPlaceholderDataSource {
     
     let url = URL(string: "https://jsonplaceholder.typicode.com/")!
     let session = URLSession(configuration: .default)
     
-    func readPost(id: Int, completion: @escaping (Result<Post,Error>) -> Void) {
+    public init() {
+        
+    }
+    
+    public func readPost(id: Int, completion: @escaping (Result<Post,Error>) -> Void) {
         let task = session.dataTask(with: url.appendingPathComponent("posts").appendingPathComponent("\(id)")) {
             (data, response, error) in
             guard let data = data else {

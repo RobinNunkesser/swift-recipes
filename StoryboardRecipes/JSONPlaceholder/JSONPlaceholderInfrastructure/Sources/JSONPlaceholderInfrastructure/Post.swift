@@ -6,9 +6,9 @@
 import Foundation
 
 // MARK: - Post
-struct Post: Codable {
-    let userId, id: Int
-    let title, body: String
+public struct Post: Codable {
+    public let userId, id: Int
+    public let title, body: String
 }
 
 typealias Posts = [Post]
