@@ -19,7 +19,7 @@ class ViewController: UIViewController {
             case let .success(value): debugPrint(value)
             case let .failure(error): debugPrint(error)
             }
-        }        
+        }
     }
 
     // MARK: Custom methods

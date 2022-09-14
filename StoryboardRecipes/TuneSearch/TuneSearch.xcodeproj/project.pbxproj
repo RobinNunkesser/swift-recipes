@@ -11,7 +11,6 @@
 		6F10AB7728CB281700AA8785 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6F10AB7628CB281700AA8785 /* AlamofireImage */; };
 		6F10AB7A28CB28BB00AA8785 /* TunesearchCorePorts in Frameworks */ = {isa = PBXBuildFile; productRef = 6F10AB7928CB28BB00AA8785 /* TunesearchCorePorts */; };
 		6F10AB7E28CB293F00AA8785 /* SearchTermDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F10AB7B28CB293E00AA8785 /* SearchTermDTO.swift */; };
-		6F10AB7F28CB293F00AA8785 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F10AB7C28CB293F00AA8785 /* SearchView.swift */; };
 		6F10AB8528CB2B0D00AA8785 /* TuneSearchInfrastructure in Frameworks */ = {isa = PBXBuildFile; productRef = 6F10AB8428CB2B0D00AA8785 /* TuneSearchInfrastructure */; };
 		6F10AB8728CB2C4900AA8785 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F10AB8628CB2C4900AA8785 /* CollectionViewModel.swift */; };
 		6F10AB8928CB2DD000AA8785 /* TrackPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F10AB8828CB2DD000AA8785 /* TrackPresenter.swift */; };
@@ -47,7 +46,6 @@
 		6F10AB7028CB261100AA8785 /* TuneSearchCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TuneSearchCore; sourceTree = "<group>"; };
 		6F10AB7128CB261800AA8785 /* TuneSearchInfrastructure */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TuneSearchInfrastructure; sourceTree = "<group>"; };
 		6F10AB7B28CB293E00AA8785 /* SearchTermDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTermDTO.swift; sourceTree = "<group>"; };
-		6F10AB7C28CB293F00AA8785 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		6F10AB8228CB2AB600AA8785 /* TuneSearchInfrastructure */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TuneSearchInfrastructure; sourceTree = "<group>"; };
 		6F10AB8328CB2AD300AA8785 /* TuneSearchCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TuneSearchCore; sourceTree = "<group>"; };
 		6F10AB8628CB2C4900AA8785 /* CollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 				6F10AB8828CB2DD000AA8785 /* TrackPresenter.swift */,
 				6F10AB8628CB2C4900AA8785 /* CollectionViewModel.swift */,
 				6F10AB7B28CB293E00AA8785 /* SearchTermDTO.swift */,
-				6F10AB7C28CB293F00AA8785 /* SearchView.swift */,
 				6F8400A821E351D20054484E /* Common */,
 				6F6A33AF21CA729000B02BE1 /* TrackEntity.swift */,
 				6F6A338721CA6C6E00B02BE1 /* AppDelegate.swift */,
@@ -305,7 +302,6 @@
 				6F6A33B221CA814500B02BE1 /* Interactor.swift in Sources */,
 				6F10AB7E28CB293F00AA8785 /* SearchTermDTO.swift in Sources */,
 				6F10AB8928CB2DD000AA8785 /* TrackPresenter.swift in Sources */,
-				6F10AB7F28CB293F00AA8785 /* SearchView.swift in Sources */,
 				6F10AB8728CB2C4900AA8785 /* CollectionViewModel.swift in Sources */,
 				6F8400B221E4B0ED0054484E /* UIImageView+AsyncImageLoad.swift in Sources */,
 				6F8400B021E4ACA70054484E /* TrackTableViewCell.swift in Sources */,
