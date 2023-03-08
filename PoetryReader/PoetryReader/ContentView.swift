@@ -9,8 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Spacer()
+            Text("Poetry Reader")
+                .font(.title)
+            Spacer()
+            Button(action: {}) {
+                Text("Give me some poetry")
+            }
+            .padding(.bottom)
+            Text("I want to sleep\r\nSwat the flies\r\nSoftly, please.\r\n\r\n-- Masaoka Shiki (1867-1902)")
+                .font(.body)
+                .padding(.bottom)
+                
+                
+        }
     }
 }
 
